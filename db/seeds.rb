@@ -17,3 +17,9 @@ Categories = Category.create([
     {name: 'Fun'},
     {name: 'Travel'}
 ])
+
+Types = Type.create([
+    {name: 'Payment'},
+    {name: 'Purchase'},    
+    {name: 'Withdrawal'}
+])
