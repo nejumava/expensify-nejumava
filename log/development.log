@@ -237,3 +237,10 @@ Processing by Api::V1::ExpensesController#index as JSON
 Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/api/v1/expenses" for 127.0.0.1 at 2020-01-28 17:31:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::ExpensesController#index as JSON
+  [1m[36mExpense Load (1.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses"[0m
+Completed 200 OK in 21ms (Views: 8.1ms | ActiveRecord: 3.2ms)
+
+
