@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200128221041) do
+ActiveRecord::Schema.define(version: 20200128222021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,4 +21,16 @@ ActiveRecord::Schema.define(version: 20200128221041) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "expenses", force: :cascade do |t|
+    t.string   "type"
+    t.date     "date_expense"
+    t.string   "concept"
+    t.integer  "category_id"
+    t.decimal  "amount"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["category_id"], name: "index_expenses_on_category_id", using: :btree
+  end
+
+  add_foreign_key "expenses", "categories"
 end
